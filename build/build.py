@@ -25,7 +25,9 @@ AARS = f"{PROJECT}/build/aars"
 BUILD = f"{PROJECT}/build/out"
 OUT_APK = "depthlock-debug.apk"
 MIN_SDK = "26"
-TARGET_SDK = "33"
+TARGET_SDK = "36"
+VERSION_CODE = "2"
+VERSION_NAME = "1.1"
 
 ANDROID_NS = "http://schemas.android.com/apk/res/android"
 TOOLS_NS = "http://schemas.android.com/tools"
@@ -205,7 +207,7 @@ def compile_link():
            "--manifest", f"{BUILD}/merged/AndroidManifest.xml",
            "--min-sdk-version", MIN_SDK,
            "--target-sdk-version", TARGET_SDK,
-           "--version-code", "1", "--version-name", "1.0",
+           "--version-code", VERSION_CODE, "--version-name", VERSION_NAME,
            "--java", f"{BUILD}/gen",
            "-R", f"{BUILD}/compiled/res.zip",
            "--auto-add-overlay"]

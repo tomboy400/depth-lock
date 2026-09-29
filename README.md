@@ -5,8 +5,8 @@ subject (a person, a pet, anything that stands out) is cut out with on-device AI
 and the big clock renders *behind* it — just like the iPhone lock screen.
 
 **Download the app:** [`DepthLock.apk`](DepthLock.apk) in this repo
-(v1.0 debug build — install on Android 8+; you may need to allow
-"install from unknown sources").
+(v1.1 debug build — targets **Android 16**, installs on Android 8+;
+you may need to allow "install from unknown sources").
 
 ## How it works
 
@@ -54,3 +54,12 @@ python3 build.py                  # builds out/depthlock-debug.apk
 
 The first wallpaper you pick needs internet for a minute — the AI model
 downloads once, then everything runs offline.
+
+## Android 16 notes (v1.1)
+
+- `targetSdk 36`, `minSdk 26`
+- The lockscreen service is declared as a `specialUse` foreground service
+  (with the required subtype property and `FOREGROUND_SERVICE_SPECIAL_USE`
+  permission)
+- Screen-on receiver is registered `NOT_EXPORTED` on Android 13+
+- Settings screen draws edge-to-edge with real system-bar insets

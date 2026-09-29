@@ -44,7 +44,11 @@ public class LockService extends Service {
         f.addAction(Intent.ACTION_SCREEN_ON);
         f.addAction(Intent.ACTION_SCREEN_OFF);
         f.addAction(Intent.ACTION_USER_PRESENT);
-        registerReceiver(screenReceiver, f);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(screenReceiver, f, Context.RECEIVER_NOT_EXPORTED);
+        } else {
+            registerReceiver(screenReceiver, f);
+        }
     }
 
     @Override public int onStartCommand(Intent intent, int flags, int startId) {
