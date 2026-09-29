@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Depth Lock</string>
+    <string name="subtitle">iOS-style depth wallpaper for your lock screen</string>
+    <string name="choose_wallpaper">Choose wallpaper</string>
+    <string name="depth_effect">Depth effect</string>
+    <string name="depth_hint">Clock slides behind the subject, like iOS</string>
+    <string name="lockscreen">Lock screen</string>
+    <string name="lockscreen_hint">Show depth wallpaper when the screen turns on</string>
+    <string name="grant_overlay">Allow display over other apps</string>
+    <string name="overlay_hint">Needed so the lockscreen can appear over your system lock screen.</string>
+    <string name="working">Working on it…</string>
+    <string name="no_subject">No clear subject found — showing plain wallpaper.</string>
+    <string name="ready">Ready. Turn on the lock screen switch to try it.</string>
+    <string name="need_wallpaper">Pick a wallpaper first.</string>
+</resources>
