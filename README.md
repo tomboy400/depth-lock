@@ -4,10 +4,6 @@ An Android lockscreen app with the iOS-style **depth effect**: your wallpaper's
 subject (a person, a pet, anything that stands out) is cut out with on-device AI,
 and the big clock renders *behind* it — just like the iPhone lock screen.
 
-**Download the app:** [`DepthLock.apk`](DepthLock.apk) in this repo
-(v1.1 debug build — targets **Android 16**, installs on Android 8+;
-you may need to allow "install from unknown sources").
-
 ## How it works
 
 1. **Pick a wallpaper** in the app. ML Kit's subject segmentation
@@ -51,6 +47,7 @@ cd build
 python3 resolve_deps.py deps      # downloads the libraries (~12 MB)
 python3 build.py                  # builds out/depthlock-debug.apk
 ```
+Install the APK on Android 8+ (allow "install from unknown sources").
 
 The first wallpaper you pick needs internet for a minute — the AI model
 downloads once, then everything runs offline.
